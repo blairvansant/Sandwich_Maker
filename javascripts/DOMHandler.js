@@ -24,18 +24,22 @@ meatChooser.addEventListener("change", function(event) {
 
   // Add the topping to the SandwichMaker to increase the total price
 });
+
 breadChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
 
 });
+
 cheeseChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
 
 });
+
 condimentsChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
 
 });
+
 veggiesChooser.addEventListener("change", function(event) {
   selectedTopping = event.target.value;
 
