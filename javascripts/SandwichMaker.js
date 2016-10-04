@@ -1,9 +1,4 @@
 var sandwichMaker = (function() {
-    // var bread = "";
-    // var cheese = "";
-    // var meat = "";
-    // var veggies = "";
-    // var condiments = "";
 
   // Private variable to store the price
   var totalPrice = 0;
@@ -12,8 +7,9 @@ var sandwichMaker = (function() {
   return {
     addTopping: function(toppingPrice) {
       totalPrice += toppingPrice;
-      console.log(totalPrice);
+      displayOrder.innerHTML = "<div>Your total price is: " + totalPrice + ' Dollars' + "</div>";
     },
+
     getTotalPrice: function(){
       return totalPrice;
     }
