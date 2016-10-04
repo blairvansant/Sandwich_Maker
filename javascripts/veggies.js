@@ -1,35 +1,23 @@
 // This SandwichMaker IIFE augments the original one
-var SandwichMaker = (function(maker) {
-var veggies = [];
-  // Private variable to store the different veggies prices
-  var veggiesPrices = {"lettuce": 0.20,
-  					  "tomato": 0.30,
-  					  "onion": 0.40,
-  					  "pickle": 0.50
-  					};
+var sandwichMaker = (function(maker) {
 
-  // Augment the original object with another method
-  maker.addVeggies = function(veggies) {
-    veggies.push(veggies);
-  };
+ // Private variable to store the different bread prices
+ var veggiesPrices = {
+     lettuce: 1,
+     tomato: 2,
+     onion: 3,
+     pickle: 4
+ };
 
- maker.removeVeggies =function(veggies){
- 	var index = veggies.indexOf(veggies);
- 		if(index !== -1){
- 			veggies.splice(index, 1);
- 		}
- } 
-
-//add veggies price
-maker.addVeggiesPrices = function(){
-	var totalveggiesPrice = 0
-	for (var i = 0; i < veggies.length; i++) {
-		totalVeggiesPrice += veggiesPrices[veggies[i]]
-	}
-	return totalVeggiesPrice;
-}
-
-// Return the new, augmented object with the new method on it
-  return maker;
-})(SandwichMaker);
- 
+ // Augment the original object with another method
+ maker.addVeggies = function(pick) {
+   if (pick in veggiesPrices) {
+     veggiesToppingPrice = veggiesPrices[pick];
+   }
+ };
+ maker.getVeggiesToppingPrice = function() {
+   return veggiesToppingPrice;
+ };
+  // Return the new, augmented object with the new method on it
+ return maker;
+ })(sandwichMaker || {});
